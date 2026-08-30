@@ -5,8 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Five Fail Family — Dark first. Hitam bukan biru.
- * Palette: near-black base, zinc neutrals, accent merah-oranye (brand).
+ * Five Fail Family — Light / white theme (KyzzAPI-inspired).
+ * Off-white paper base, ink-black ink & CTA, soft neutral borders,
+ * mono micro-labels, subtle graph-paper backdrop.
  */
 
 @theme inline {
@@ -39,91 +40,146 @@
   --font-display: "Space Grotesk", "Archivo Black", system-ui, sans-serif;
 }
 
-/* ── Dark (default / light is overridden below) ─────────────── */
 :root {
   --radius: 0.875rem;
-  --theme-hue: 0; /* netral, tidak biru */
 
-  --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.5);
-  --shadow-md: 0 8px 24px -8px rgba(0,0,0,0.65);
-  --shadow-lg: 0 16px 40px -12px rgba(0,0,0,0.75);
+  --shadow-sm: 0 1px 2px 0 rgba(15, 15, 15, 0.05);
+  --shadow-md: 0 6px 20px -10px rgba(15, 15, 15, 0.14);
+  --shadow-lg: 0 20px 48px -18px rgba(15, 15, 15, 0.22);
 
-  /* Base — hitam pekat, bukan biru gelap */
-  --background: oklch(0.10 0.003 0);
-  --foreground: oklch(0.94 0.005 0);
+  /* Paper base — putih, bukan hitam */
+  --background: oklch(0.985 0.002 95);
+  --foreground: oklch(0.18 0.004 90);
 
-  --card: oklch(0.145 0.005 0);
-  --card-foreground: oklch(0.94 0.005 0);
-  --popover: oklch(0.16 0.005 0);
-  --popover-foreground: oklch(0.94 0.005 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.004 90);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.004 90);
 
-  --primary: oklch(0.94 0.005 0);
-  --primary-foreground: oklch(0.10 0.003 0);
+  --primary: oklch(0.2 0.004 90);
+  --primary-foreground: oklch(0.99 0.002 95);
 
-  --secondary: oklch(0.20 0.005 0);
-  --secondary-foreground: oklch(0.90 0.005 0);
+  --secondary: oklch(0.965 0.003 95);
+  --secondary-foreground: oklch(0.24 0.004 90);
 
-  --muted: oklch(0.20 0.005 0);
-  --muted-foreground: oklch(0.58 0.006 0);
+  --muted: oklch(0.958 0.003 95);
+  --muted-foreground: oklch(0.53 0.006 90);
 
-  /* Accent — oranye-merah menyala (brand 5F) */
-  --accent: oklch(0.68 0.22 32);
-  --accent-foreground: oklch(0.99 0.005 32);
+  /* Accent = ink black (CTA & highlight, gaya KyzzAPI) */
+  --accent: oklch(0.2 0.004 90);
+  --accent-foreground: oklch(0.99 0.002 95);
 
-  --accent-2: oklch(0.65 0.18 280);
-  --accent-2-foreground: oklch(0.99 0.005 280);
-  --accent-3: oklch(0.68 0.16 175);
-  --accent-3-foreground: oklch(0.14 0.02 175);
-  --accent-4: oklch(0.70 0.19 60);
-  --accent-4-foreground: oklch(0.99 0.005 60);
+  --accent-2: oklch(0.55 0.19 275); /* indigo */
+  --accent-2-foreground: oklch(0.99 0.005 275);
+  --accent-3: oklch(0.6 0.13 165); /* emerald */
+  --accent-3-foreground: oklch(0.99 0.005 165);
+  --accent-4: oklch(0.62 0.19 32); /* orange */
+  --accent-4-foreground: oklch(0.99 0.005 32);
 
-  --destructive: oklch(0.62 0.24 25);
-  --destructive-foreground: oklch(0.99 0.005 0);
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.99 0.002 95);
 
-  --border: oklch(0.22 0.005 0);
-  --input: oklch(0.20 0.005 0);
-  --ring: var(--accent);
-}
+  --border: oklch(0.915 0.003 95);
+  --input: oklch(0.94 0.003 95);
+  --ring: oklch(0.78 0.004 90);
 
-/* ── Light mode (opsional, kalau user prefer light) ─────────── */
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: oklch(0.97 0.003 0);
-    --foreground: oklch(0.14 0.005 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.14 0.005 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.14 0.005 0);
-    --primary: oklch(0.14 0.005 0);
-    --primary-foreground: oklch(0.97 0.003 0);
-    --secondary: oklch(0.94 0.005 0);
-    --secondary-foreground: oklch(0.14 0.005 0);
-    --muted: oklch(0.94 0.005 0);
-    --muted-foreground: oklch(0.50 0.006 0);
-    --accent: oklch(0.62 0.22 32);
-    --accent-foreground: oklch(0.99 0.005 32);
-    --border: oklch(0.88 0.005 0);
-    --input: oklch(0.92 0.005 0);
-    --shadow-sm: 0 1px 3px 0 rgba(0,0,0,0.08);
-    --shadow-md: 0 8px 24px -8px rgba(0,0,0,0.14);
-    --shadow-lg: 0 16px 40px -12px rgba(0,0,0,0.18);
-  }
+  --grid-line: oklch(0.925 0.004 95);
 }
 
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv01";
+    background-image:
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 56px 56px;
+    background-attachment: fixed;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* ── Motion keyframes (dipakai di /system & /join) ───────────── */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 oklch(from var(--color-accent) l c h / 0.28);
+  }
+  70% {
+    box-shadow: 0 0 0 10px oklch(from var(--color-accent) l c h / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(from var(--color-accent) l c h / 0);
+  }
+}
+
+@utility animate-rise {
+  animation: riseIn 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@utility animate-float-soft {
+  animation: floatSoft 5.5s ease-in-out infinite;
+}
+
+@utility animate-pulse-ring {
+  animation: pulseRing 2.2s ease-out infinite;
+}
+
+@utility shimmer {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      oklch(1 0 0 / 0.75),
+      transparent
+    );
+    animation: shimmerSweep 2.4s ease-in-out infinite;
   }
 }
 
@@ -152,15 +208,18 @@
   border: 1px solid var(--color-border);
   background: var(--color-card);
   color: var(--color-card-foreground);
-  box-shadow: var(--shadow-md);
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
 }
 
 @utility glass-card-hover {
   &:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-    border-color: oklch(from var(--color-accent) l c h / 0.4);
+    box-shadow: var(--shadow-md);
+    border-color: oklch(0.85 0.004 90);
   }
 }
 
@@ -170,7 +229,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   border: 1px solid transparent;
   background: var(--color-accent);
   color: var(--color-accent-foreground);
@@ -178,11 +237,26 @@
   font-weight: 600;
   font-size: 0.875rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
   cursor: pointer;
-  &:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); opacity: 0.90; }
-  &:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
-  &:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    opacity: 0.92;
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
 }
 
 @utility btn-ghost {
@@ -191,7 +265,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.7rem 1.4rem;
-  border-radius: 999px;
+  border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-card);
   color: var(--color-foreground);
@@ -199,14 +273,24 @@
   font-weight: 600;
   font-size: 0.875rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
   cursor: pointer;
-  &:hover { background: var(--color-secondary); transform: translateY(-2px); box-shadow: var(--shadow-md); }
-  &:active { transform: translateY(0); box-shadow: var(--shadow-sm); }
+  &:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  &:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+  }
 }
 
 @utility text-accent-soft {
-  color: var(--color-accent);
+  color: var(--color-muted-foreground);
   font-weight: 700;
 }
 
