@@ -227,13 +227,6 @@ function SystemPage() {
         </div>
       </div>
 
-      {/* ── Banner 16:9 ────────────────────────────────────── */}
-      <HeroBanner
-        eyebrow="System Banner"
-        title="Five Fail Infrastructure"
-        subtitle="Visual identitas sistem Five Fail Family — dipantau realtime dari platform deploy."
-      />
-
       {/* ── Platform info ──────────────────────────────────── */}
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatTile

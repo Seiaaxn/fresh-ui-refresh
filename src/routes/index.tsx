@@ -241,6 +241,13 @@ function Index() {
             ))}
           </div>
         </div>
+
+        {/* Banner 16:9 di dalam kartu hero */}
+        <HeroBanner
+          eyebrow="Featured Banner"
+          title="Visual Identity 5F"
+          subtitle="Banner resmi Five Fail Family — identitas visual untuk semua member, editor & kreator."
+        />
       </section>
 
       {/* ── Overview metric ──────────────────────────────────── */}
