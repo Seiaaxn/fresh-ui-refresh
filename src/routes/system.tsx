@@ -225,6 +225,13 @@ function SystemPage() {
           </div>
           <StatusBadge ok={ping !== null} />
         </div>
+
+        {/* Banner 16:9 di dalam kartu hero */}
+        <HeroBanner
+          eyebrow="System Banner"
+          title="Five Fail Infrastructure"
+          subtitle="Visual identitas sistem Five Fail Family — dipantau realtime dari platform deploy."
+        />
       </div>
 
       {/* ── Platform info ──────────────────────────────────── */}
