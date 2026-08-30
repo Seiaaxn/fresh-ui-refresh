@@ -56,8 +56,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.004 90);
 
-  --primary: oklch(0.2 0.004 90);
-  --primary-foreground: oklch(0.99 0.002 95);
+  --primary: oklch(0.55 0.19 275);
+  --primary-foreground: oklch(0.99 0.005 275);
 
   --secondary: oklch(0.965 0.003 95);
   --secondary-foreground: oklch(0.24 0.004 90);
@@ -65,12 +65,12 @@
   --muted: oklch(0.958 0.003 95);
   --muted-foreground: oklch(0.53 0.006 90);
 
-  /* Accent = ink black (CTA & highlight, gaya KyzzAPI) */
-  --accent: oklch(0.2 0.004 90);
-  --accent-foreground: oklch(0.99 0.002 95);
+  /* Accent = indigo lembut (tanpa hitam) */
+  --accent: oklch(0.55 0.19 275);
+  --accent-foreground: oklch(0.99 0.005 275);
 
-  --accent-2: oklch(0.55 0.19 275); /* indigo */
-  --accent-2-foreground: oklch(0.99 0.005 275);
+  --accent-2: oklch(0.58 0.2 305); /* violet */
+  --accent-2-foreground: oklch(0.99 0.005 305);
   --accent-3: oklch(0.6 0.13 165); /* emerald */
   --accent-3-foreground: oklch(0.99 0.005 165);
   --accent-4: oklch(0.62 0.19 32); /* orange */
@@ -97,10 +97,21 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv01";
     background-image:
+      radial-gradient(ellipse 70% 40% at 50% -10%, oklch(from var(--color-accent) l c h / 0.07), transparent 70%),
+      radial-gradient(ellipse 45% 32% at 88% 12%, oklch(from var(--accent-3) l c h / 0.05), transparent 70%),
+      radial-gradient(ellipse 45% 32% at 8% 28%, oklch(from var(--accent-2) l c h / 0.05), transparent 70%),
       linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
       linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-    background-size: 56px 56px;
+    background-size:
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      56px 56px,
+      56px 56px;
     background-attachment: fixed;
+  }
+  ::selection {
+    background: oklch(from var(--color-accent) l c h / 0.18);
   }
   h1,
   h2,
