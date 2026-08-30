@@ -13,6 +13,7 @@ import {
 import { img as resolveImg, onImgError } from "../lib/site-images";
 import { HashtagSection } from "../components/TikTokSections";
 import { AnimatedCounter } from "../components/AnimatedCounter";
+import { HeroBanner } from "../components/HeroBanner";
 import { GEN_MEMBER_COUNTS, GEN_FOLLOWER_REQUIREMENTS } from "../lib/site-config";
 import { useI18n } from "../lib/i18n";
 
@@ -225,6 +226,13 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* ── Banner 16:9 ─────────────────────────────────────── */}
+      <HeroBanner
+        eyebrow="Featured Banner"
+        title="Visual Identity 5F"
+        subtitle="Banner resmi Five Fail Family — identitas visual untuk semua member, editor & kreator."
+      />
 
       {/* ── Overview metric ──────────────────────────────────── */}
       <section className="mt-16">
