@@ -155,7 +155,23 @@ function Index() {
     <main className="mx-auto max-w-6xl px-4 pb-24">
       {/* ── Hero card ─────────────────────────────────────────── */}
       <section className="glass-card animate-rise mt-8 overflow-hidden p-7 md:p-12">
-        <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
+        {/* Dekorasi glow lembut agar hero tidak polos */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full opacity-25 blur-3xl"
+          style={{ background: "var(--accent-2)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-28 -left-20 h-64 w-64 rounded-full opacity-20 blur-3xl"
+          style={{ background: "var(--accent-3)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-1/3 left-1/2 h-48 w-48 rounded-full opacity-15 blur-3xl"
+          style={{ background: "var(--accent-4)" }}
+        />
+        <div className="relative grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <span className="chip">
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
