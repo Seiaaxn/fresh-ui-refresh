@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Zap, Clock, Server, Cpu, MemoryStick, Globe, HardDrive } from "lucide-react";
 import { BackButton } from "../components/BackButton";
+import { HeroBanner } from "../components/HeroBanner";
 
 export const Route = createFileRoute("/system")({
   head: () => ({
@@ -225,6 +226,13 @@ function SystemPage() {
           <StatusBadge ok={ping !== null} />
         </div>
       </div>
+
+      {/* ── Banner 16:9 ────────────────────────────────────── */}
+      <HeroBanner
+        eyebrow="System Banner"
+        title="Five Fail Infrastructure"
+        subtitle="Visual identitas sistem Five Fail Family — dipantau realtime dari platform deploy."
+      />
 
       {/* ── Platform info ──────────────────────────────────── */}
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
