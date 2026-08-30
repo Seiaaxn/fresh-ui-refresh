@@ -116,8 +116,8 @@ function AdminPage() {
             <img
               src={img(owner.image)}
               alt={owner.name}
-              className="relative h-24 w-24 rounded-2xl object-cover shadow-md ring-2 md:h-28 md:w-28"
-              style={{ ringColor: "var(--color-accent)" }}
+              className="relative h-24 w-24 rounded-2xl object-cover shadow-md ring-2 ring-border md:h-28 md:w-28"
+
               loading="lazy"
               onError={onImgError}
             />
