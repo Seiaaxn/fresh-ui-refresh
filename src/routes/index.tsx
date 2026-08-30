@@ -243,13 +243,6 @@ function Index() {
         </div>
       </section>
 
-      {/* ── Banner 16:9 ─────────────────────────────────────── */}
-      <HeroBanner
-        eyebrow="Featured Banner"
-        title="Visual Identity 5F"
-        subtitle="Banner resmi Five Fail Family — identitas visual untuk semua member, editor & kreator."
-      />
-
       {/* ── Overview metric ──────────────────────────────────── */}
       <section className="mt-16">
         <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
